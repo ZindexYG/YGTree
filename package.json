@@ -6,6 +6,11 @@
   "version": "1.2.0",
   "license": "MIT",
   "main": "./dist/index.js",
+  "keywords": [
+    "tree",
+    "one-tree",
+    "YGtree"
+  ],
   "bin": {
     "one-tree": "dist/index.js"
   },
