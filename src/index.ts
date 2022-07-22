@@ -7,6 +7,15 @@ import {
 } from './utils/argumentError'
 
 const program = new Command()
+
+// 错误
+if (process.argv.length <= 2) {
+  console.log(
+    '无效命令： %s\n —help 或者 -h 获取可用命令的列表',
+    program.args.join(' '),
+  )
+  process.exit()
+}
 // 选项定义
 program
   .name(getPkg().name)
@@ -26,6 +35,15 @@ program
     null,
   )
   .option('--gitignore', '使用 .gitignore 文件过滤')
+
+
+program.on('command:*', () => {
+  console.log(
+    '无效命令： %s\n —help 或者 -h 获取可用命令的列表',
+    program.args.join(' '),
+  )
+  return
+})
 
 program.parse()
 
