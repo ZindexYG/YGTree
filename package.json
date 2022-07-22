@@ -3,7 +3,7 @@
   "displayName": "one-tree",
   "description": "这是一个🌲",
   "author": "zindex_yg",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "main": "./dist/index.js",
   "keywords": [
